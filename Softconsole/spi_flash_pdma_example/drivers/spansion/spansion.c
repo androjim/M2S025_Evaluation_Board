@@ -396,6 +396,6 @@ static void wait_ready( void )
     
     do {
         MSS_SPI_transfer_block( &g_mss_spi0, &command, sizeof(command), &ready_bit, sizeof(ready_bit) );
-        ready_bit = ready_bit & READY_BIT_MASK;
+        ready_bit = ready_bit & READY_BIT_MASK; 
     } while( ready_bit == 1 );
 }
