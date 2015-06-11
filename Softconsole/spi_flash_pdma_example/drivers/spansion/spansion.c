@@ -14,8 +14,8 @@
 
 #define SPSN_ID_25FL128S_64KB   0x4D01    // manufacture is & device id
 
-#define READ_ARRAY_OPCODE   0x03
-#define DEVICE_ID_READ      0x9F
+#define READ_ARRAY_OPCODE        0x03
+#define DEVICE_ID_READ           0x9F
 
 
 #define WRITE_ENABLE_CMD    	0x06
@@ -396,6 +396,6 @@ static void wait_ready( void )
     
     do {
         MSS_SPI_transfer_block( &g_mss_spi0, &command, sizeof(command), &ready_bit, sizeof(ready_bit) );
-        ready_bit = ready_bit & READY_BIT_MASK;
+        ready_bit = ready_bit & READY_BIT_MASK; 
     } while( ready_bit == 1 );
 }
