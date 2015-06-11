@@ -12,6 +12,7 @@
 #include "drivers/mss_pdma/mss_pdma.h"
 #include "drivers/mss_spi/mss_spi.h"
 #include "drivers/spansion/spansion.h"
+#include “drivers/mss_uart/mss_uart.h”
 
 #define BUFFER_A_SIZE   3000
 
